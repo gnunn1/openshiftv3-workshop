@@ -124,6 +124,8 @@ $ oc get service
 
 *Remember* to substitute the username. Expose the service:
 
+*Remember* to substitute the masterurl (ask instructor).
+
 ....
 $ oc expose service blue --hostname=bluegreen.userXX.{{APPS_ADDRESS}} --name=bluegreen
 ....
@@ -259,7 +261,7 @@ To get "true" round robin; annotate your route with the following
 ....
 oc annotate route/bluegreen haproxy.router.openshift.io/balance=roundrobin
 oc annotate route/bluegreen haproxy.router.openshift.io/disable_cookies=true
-....
+.....
 
 
 

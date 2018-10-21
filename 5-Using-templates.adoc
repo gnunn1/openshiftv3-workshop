@@ -48,7 +48,7 @@ MySQL Connection Username: pricelist
 MySQL Connection Password: pricelist
 MySQL root user Password: pricelist
 MySQL Database Name: pricelist
-....
+.....
 
 image::mysql_ephemeral_creation.png[image]
 

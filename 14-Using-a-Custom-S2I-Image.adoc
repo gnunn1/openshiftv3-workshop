@@ -1,9 +1,10 @@
-[[deploy-a-springboot-application]]
-Deploy a SpringBoot Application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[[using-a-custom-s2i-image]]
+Using Custom S2I Image to deploy a SpringBoot Application
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this exercise we will deploy a SpringBoot application using a custom
-source to image builder image.
+source to image builder image. You will learn how to use an s2i image that 
+is not on openshift to build your application.
 
 IMPORTANT: Please replace *userXX* with the username assigned to you in
 the commands below.
@@ -33,7 +34,7 @@ $ oc new-app veermuchandi/spring-mvn-base~https://github.com/RedHatWorkshops/spr
 
     Tags: builder, java, java8, maven, maven3, springboot
 
-    * An image stream will be created as "spring-mvn-base:latest" that will track the source image
+    *  An image stream will be created as "spring-mvn-base:latest" that will track the source image
     * A source build using source code from https://github.com/RedHatWorkshops/spring-sample-app will be created
       * The resulting image will be pushed to image stream "bootapp:latest"
       * Every time "spring-mvn-base:latest" changes a new build will be triggered

@@ -10,7 +10,7 @@ application docker image for you.
 
 If you want to, you can create a new project based on what you have
 learned in the previous lab. Since we already have a project we will use
-it. Run the following command to make sure. 
+it. Run the following command to make sure.
 
 IMPORTANT: Please replace *userXX* with the username assigned to you in
 the commands below.
@@ -33,7 +33,7 @@ also a PHP version of the same project available in the php folder if
 you like to use that. The php version does exactly the same it has a
 `time.php` file that displays the time.
 
-*Docker Build*: When OpenShift finds a Dockerfile in the source, it uses
+*Docker Build*: When OpenShift finds a Dockerfile in the source,it uses
 this Dockerfile as the basis to create a docker image for your
 application. This strategy is called `Docker Build` strategy on
 OpenShift. We’ll see more about it when we look at the build
@@ -44,7 +44,7 @@ Later it uses this image to deploy an application that runs in a pod.
 Now let’s create an application using this approach. We will run
 `oc new-app` command by supplying the git uri as the parameter.
 
-....
+.....
 $ oc new-app https://github.com/RedHatWorkshops/time --context-dir=rhel
 
 --> Found Docker image 1d309a6 (6 weeks old) from registry.access.redhat.com for "registry.access.redhat.com/rhel7"
@@ -390,7 +390,7 @@ time                            time      app=time
 
 And then we check the route exposed.
 
-....
+.....
 $ oc get routes
 
 NAME      HOST/PORT                                           PATH      SERVICES   PORT       TERMINATION   WILDCARD

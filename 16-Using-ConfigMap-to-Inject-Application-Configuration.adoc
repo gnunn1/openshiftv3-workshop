@@ -1,14 +1,13 @@
-[[adding-a-backend-database-to-the-springboot-application]]
-Adding a backend database to the SpringBoot application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[[using-configmap-to-inject-application-configuration]]
+Using ConfigMap to add a Backend Database configuration to the application
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this exercise we will add a backend database to the previous deployed
-SpringBoot application.
+SpringBoot application using ConfigMaps.
 
-IMPORTANT: Please replace *userXX* with the username assigned to you in
-the commands below.
-
-If you already created the SpringBoot application in the previous lab, just test one more thing. Try your application url
+If you already created the SpringBoot application in the previous lab
+link:14-Using-a-Custom-S2I-Image.adoc[deploy a spring
+boot application], just test one more thing. Try your application url
 with `/dbtest` (http://bootapp-spring-userXX.{{APPS_ADDRESS}}/dbtest) extension and it should list you some data from
 the HSQLDB configured within the same app.
 
@@ -248,7 +247,7 @@ like this
 Optional: you can run the following to do the update on the
 deploymentConfig:
 
-....
+.....
     oc set volumes dc/bootapp --add -m /opt/app-root/src/config --configmap-name=app-props
 ....
 
