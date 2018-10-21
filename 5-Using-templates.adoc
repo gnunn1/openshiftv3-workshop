@@ -39,7 +39,7 @@ exercise.
 image::mysql_ephemeral_template.png[image]
 
 You will be taken to the mysql ephemeral creation screen. Click *Next*
-parameters and edit the values to use the following values:
+and edit the values to use the following values:
 
 ....
 Add to Project: consoleproject-userXX
@@ -48,7 +48,7 @@ MySQL Connection Username: pricelist
 MySQL Connection Password: pricelist
 MySQL root user Password: pricelist
 MySQL Database Name: pricelist
-.....
+....
 
 image::mysql_ephemeral_creation.png[image]
 

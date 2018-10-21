@@ -58,7 +58,7 @@ $ oc new-app https://github.com/RedHatWorkshops/time --context-dir=rhel
       * Other containers can access this service through the hostname "time"
     * WARNING: Image "registry.access.redhat.com/rhel7" runs as the 'root' user which may not be permitted by your cluster administrator
 
---> Creating resources with label app=time ...
+--> Creating resources with label app=time
     imagestream "rhel7" created
     imagestream "time" created
     buildconfig "time" created
