@@ -172,6 +172,7 @@ service "welcome" deleted
 pod "welcome-1-ynedb" deleted
 ....
 
+
 You will notice that it has deleted the imagestream for the application,
 the deploymentconfig, the service and the route.
 
