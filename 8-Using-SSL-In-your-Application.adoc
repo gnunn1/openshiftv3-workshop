@@ -10,7 +10,7 @@ with the OpenShift Wildcard certificate.
 For this exercise, we will use an application that we created before. We
 will be using the *myjbossapp-userXX* that you created in the previous
 labs. Make sure you are switched to that project by using the *oc
-project* command. 
+project* command.
 
 IMPORTANT: Please replace *userXX* with the username assigned to you in
 the commands below.
@@ -106,7 +106,7 @@ spec:
     kind: Service
     name: ks
 status: {}
-.....
+....
 
 *Step 4: Verify*
 
