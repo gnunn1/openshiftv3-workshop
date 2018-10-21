@@ -131,7 +131,7 @@ for 200 status code) or from the browser and see the result
 $ curl -Is http://welcome.userXX.{{APPS_ADDRESS}}
 ....
 
-NOTE: If you do not have the curl command on your machine you can simply visit the http://welcome.userXX.{{APPS_ADDRESS}}[URL] directly in a browser.
+NOTE: If you do not have the curl command on your machine you can simply visit the URL directly in a browser.
 
 Voila!! you created your first application using an existing docker
 image on OpenShift.
