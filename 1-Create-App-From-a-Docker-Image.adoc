@@ -113,7 +113,7 @@ Now add a route to the service with the following command. `oc expose`
 command will allow you to expose your service to the world so that you
 can access it from the browser.
 
-NOTE: The `--hostname` attribute in the command below is not required properly as we are using
+NOTE: The `--hostname` attribute in the command below is optional as we are using
 a wildcard dns in our cluster, in our case it is `*.{{APPS_ADDRESS}}`, so if you skip using it, your route is going to be defined by OpenShift.
 ....
 $ oc expose service welcome --name=welcome --hostname=welcome.userXX.{{APPS_ADDRESS}}
@@ -130,6 +130,8 @@ for 200 status code) or from the browser and see the result
 ....
 $ curl -Is http://welcome.userXX.{{APPS_ADDRESS}}
 ....
+
+NOTE: If you do not have the curl command on your machine you can simply visit the http://welcome.userXX.{{APPS_ADDRESS}}[URL] directly in a browser.
 
 Voila!! you created your first application using an existing docker
 image on OpenShift.
