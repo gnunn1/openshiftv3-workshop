@@ -69,6 +69,7 @@ $ oc new-app https://github.com/RedHatWorkshops/time --context-dir=rhel
     Run 'oc status' to view your app.
 ....
 
+
 You’ll notice that OpenShift created a few things at this point. You
 will find a buildconfig, deploymentconfig, service and imagestreams in
 the above list. The application is not running yet. It needs to be built
