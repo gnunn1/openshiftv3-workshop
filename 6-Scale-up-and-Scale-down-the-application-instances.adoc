@@ -144,7 +144,7 @@ your application. This means, even if you delete the current replication
 controller, the new one that gets created will be assigned the REPLICAS
 value based on what is set for DC. If you change it on the Replication
 Controller, the application will scale up. But if you happen to delete
-the current replication controller for some reason, you will loose that
+the current replication controller for some reason, you will lose that
 setting.
 
 *Step 3: Scale Application*

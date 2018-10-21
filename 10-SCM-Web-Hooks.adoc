@@ -112,9 +112,7 @@ NAME            CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 scm-web-hooks   172.30.71.191   <none>        8080/TCP   4m
 ....
 
-*Remember* to substitute the userXX.
-
-*Remember* to substitute the masterurl (ask instructor).
+*Remember* to substitute the userXX when exposing the service:
 
 ....
 $ oc expose service scm-web-hooks --hostname=scm-web-hooks.userXX.{{APPS_ADDRESS}}

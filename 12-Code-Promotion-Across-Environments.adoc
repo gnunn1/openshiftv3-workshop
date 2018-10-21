@@ -144,13 +144,8 @@ that we tagged in development. Also expose service to create route for
 this project and *remember* to substitute username.
 
 ....
-<<<<<<< HEAD
 oc project testing-userXX
-oc new-app development-userXX/welcome-php:promote-qa
-=======
-oc project testing-UserName
-oc new-app  --image-stream=="development-UserName/welcome-php:promote-qa"
->>>>>>> 31d3e96533041196957277618ce8aab7465623c6
+oc new-app  --image-stream=="development-userXX/welcome-php:promote-qa"
 oc expose service welcome-php
 ....
 

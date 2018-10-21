@@ -16,7 +16,7 @@ we created a configuration to connect to the MySQL database by mounting
 IMPORTANT: Please replace *userXX* with the username assigned to you in
 the commands below.
 
-Ensure you are in the `spring-userXX` project. 
+Ensure you are in the `spring-userXX` project.
 
 Based on what you have learnt in the previous labs, create a new
 Postgresql database pod i.e. `Add to project`, search for `postgresql`,
@@ -203,7 +203,7 @@ refreshed.
 Now try the `/dbtest` endpoint again. Now the result will show the data
 from the postgresql database.
 
-.....
+....
 Customers List
 
 

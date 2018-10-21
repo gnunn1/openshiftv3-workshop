@@ -58,9 +58,9 @@ We will be using a sample application that displays a blue or green
 rectangle. The sample app can be browsed at
 {{GIT_SERVER_URL}}/RedHatWorkshops/bluegreen
 
-We will be using an env var in order to change the color of the box; but
+We will be using an environment variable in order to change the color of the box; but
 in practice you would use a different branch for each version of the
-code. (E.g. v1 branch and v2 branch)
+code. (e.g. v1 branch and v2 branch)
 
 ....
 $ oc new-app --image-stream=php --code={{GIT_SERVER_URL}}/RedHatWorkshops/bluegreen --env COLOR=blue --name=blue
@@ -122,9 +122,7 @@ $ oc get service
 
 *Step 7: Create a route for the application*
 
-*Remember* to substitute the username. Expose the service:
-
-*Remember* to substitute the masterurl (ask instructor).
+Create a route by exposing the service as you have done in previous labs. *Remember* to substitute the userXX when you expose the service:
 
 ....
 $ oc expose service blue --hostname=bluegreen.userXX.{{APPS_ADDRESS}} --name=bluegreen
@@ -221,7 +219,8 @@ application with a green rectangle.
 Part III
 ~~~~~~~
 
-You can route traffic to both services. This is also known as "cannary in a colemine".
+You can route traffic to both services thereby achieving blue-green deployments. Weighting traffic to primarily
+one service versus the other achieves a canary deployment, this is also known as "canary in a coal mine".
 
 *Step 1: Edit Your Route*
 Using the lefthand side navigation; click on *Applications -> Routes*. This will
@@ -237,7 +236,7 @@ image::bg-edit-route.png[image]
 
 Next, tick on `Split traffic across multiple services`
 
-image::g-slipt-traffic.png[image]
+image::bg-slipt-traffic.png[image]
 
 Here, set the weight to 50% on blue and 50% on green. This will make it to where half the
 traffic will go to the green application and half to the blue application.
@@ -261,7 +260,7 @@ To get "true" round robin; annotate your route with the following
 ....
 oc annotate route/bluegreen haproxy.router.openshift.io/balance=roundrobin
 oc annotate route/bluegreen haproxy.router.openshift.io/disable_cookies=true
-.....
+....
 
 
 
