@@ -389,7 +389,7 @@ NAME      HOST/PORT   PATH      SERVICE   LABELS     TLS TERMINATION
 time                            time      app=time
 ....
 
-And then we check the route exposed.
+And then we check that the route was exposed.
 
 ....
 $ oc get routes
@@ -397,6 +397,7 @@ $ oc get routes
 NAME      HOST/PORT                                           PATH      SERVICES   PORT       TERMINATION   WILDCARD
 time      time-mycliproject-userXX.{{APPS_ADDRESS}}             time       8080-tcp                 None
 ....
+
 
 *Note:* Unlike in the previous lab, this time we did not use `--hostname`
 parameter while exposing the service to create a route. OpenShift
