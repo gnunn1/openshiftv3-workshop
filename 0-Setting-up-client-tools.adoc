@@ -13,6 +13,9 @@ interface (OCP CLI)
 * Install the OCP CLI tools.
 * CLI basic configuration
 
+*Note:* If you cannot install the tools on your laptop and were just prefer
+to start the labs right away, you can access an online terminal at {{WEB_TERMINAL_URL}}.
+
 *Locating the binaries*
 
 The OSE CLI exposes commands for managing applications, as well as

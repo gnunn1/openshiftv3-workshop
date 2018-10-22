@@ -21,6 +21,9 @@ config:
     - name: ORIGIN_DOWNLOAD_OC_URL
       desc: URL for Origin oc binary download
       value: https://github.com/openshift/origin/releases/tag/v3.7.0
+    - name: WEB_TERMINAL_URL
+      desc: URL for web terminal with utilities available
+      value: https://terminal.ocplab.com
 
 modules:
   0-Setting-up-client-tools:

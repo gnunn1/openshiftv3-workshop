@@ -21,6 +21,9 @@ config:
     - name: ORIGIN_DOWNLOAD_OC_URL
       desc: URL for Origin oc binary download
       value: https://github.com/openshift/origin/releases/tag/v3.10.0
+    - name: WEB_TERMINAL_URL
+      desc: URL for web terminal with utilities available
+      value: https://terminal.ocplab.com
 
 modules:
   0-Setting-up-client-tools:
@@ -37,5 +40,29 @@ modules:
     name: Using Templates
   6-Scale-up-and-Scale-down-the-application-instances:
     name: Scale up and Scale down and Idle the application instances
+  7-Binary-Deployment-of-a-war-file:
+    name: Binary Deployment of a war file
+  8-Using-SSL-In-your-Application:
+    name: Using SSL in your application
   9-Blue-Green-Deployments:
     name: Blue-Green Deployments
+  10-SCM-Web-Hooks:
+    name: SCM Web Hooks
+  11-Rollback-Applications:
+    name: Rollback Applications
+  12-Code-Promotion-Across-Environments:
+    name: Code Promotion across Environments
+  13-Using-Persistent-Storage:
+    name: Using persistent storage
+  14-Using-a-Custom-S2I-Image:
+    name: Using a Custom S2I Image
+  15-Adding-Custom-S2I-Image-to-the-Project-Catalog:
+    name: Adding Custom S2I Image to the Project Catalog
+  16-Using-ConfigMap-to-Inject-Application-Configuration:
+    name: Using ConfigMap to Inject Application Configuration
+  17-Dynamic-Configuration-Updates-using-ConfigMap:
+    name: Dynamic configuration updates using ConfigMap
+  18-Changing-code-on-the-fly:
+    name: Changing code on the fly
+  19-Creating-a-Pipeline:
+    name: Creating a pipeline
