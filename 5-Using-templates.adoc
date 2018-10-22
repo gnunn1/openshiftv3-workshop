@@ -69,6 +69,12 @@ image::mysql_pod_on_proj_overview.png[image]
 
 Please wait for the Bindings to complete. It may take few minutes.
 
+In the command line, switch to the new project:
+
+....
+oc project consoleproject-userXX
+....
+
 While we are waiting we can add a label to the mysql deployment, this label
 determines how the deployment is displayed with respect to applications in the OpenShift web console.
 Run the following on the command line:

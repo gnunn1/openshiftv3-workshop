@@ -49,6 +49,8 @@ renamed to `ROOT.war` and placed in the deployments folder (you can
 download this example WAR file
 https://raw.githubusercontent.com/RedHatWorkshops/ps/master/deployments/ROOT.war[here]).
 
+NOTE: If you are using the provided linux terminal, you can use the wget <URL> command to download the war.
+
 ....
 $ ls -lR
 

@@ -52,8 +52,6 @@ modules:
     name: Rollback Applications
   12-Code-Promotion-Across-Environments:
     name: Code Promotion across Environments
-  13-Using-Persistent-Storage:
-    name: Using persistent storage
   14-Using-a-Custom-S2I-Image:
     name: Using a Custom S2I Image
   15-Adding-Custom-S2I-Image-to-the-Project-Catalog:
