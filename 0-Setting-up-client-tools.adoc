@@ -13,9 +13,10 @@ interface (OCP CLI)
 * Install the OCP CLI tools.
 * CLI basic configuration
 
-NOTE: If you cannot install the tools on your laptop and were just prefer
+NOTE: If you cannot install the tools on your laptop or would just prefer
 to start the labs right away, you can access an online terminal at {{WEB_TERMINAL_URL}} using
-the same credentials provided to you for OpenShift by the instructor.
+the same credentials provided to you for OpenShift by the instructor. Note you will still need to
+perform the final step (CLI basic configuration) at the end which is logging into OpenShift using the oc tool.
 
 *Locating the binaries*
 
