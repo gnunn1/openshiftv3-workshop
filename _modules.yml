@@ -5,10 +5,10 @@ config:
       value: https://github.com
     - name: CONSOLE_ADDRESS
       desc: HTTP address of the OpenShift console
-      value: https://master.toronto.openshiftworkshop.com
+      value: https://ocplab.com:8443
     - name: APPS_ADDRESS
       desc: HTTP address suffix of apps deployed on OpenShift
-      value: apps.toronto.openshiftworkshop.com
+      value: apps.ocplab.com
     - name: GET_STARTED_CLI_URL
       desc: URL to documentation to configure CLI
       value: https://docs.openshift.com/container-platform/latest/cli_reference/get_started_cli.html
@@ -20,7 +20,7 @@ config:
       value: https://access.redhat.com/downloads/content/290
     - name: ORIGIN_DOWNLOAD_OC_URL
       desc: URL for Origin oc binary download
-      value: https://github.com/openshift/origin/releases/tag/v3.10.0
+      value: https://github.com/openshift/origin/releases/tag/v3.7.0
     - name: WEB_TERMINAL_URL
       desc: URL for web terminal with utilities available
       value: https://terminal.ocplab.com
