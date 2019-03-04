@@ -12,15 +12,15 @@ environments (development, qa, production).
 
 *Step 1: Create two projects*
 
-IMPORTANT: Please replace *userxx* with the username assigned to you in
+IMPORTANT: Please replace *userXX* with the username assigned to you in
 the commands below.
 
 Using the knowledge you gained from the past create two projects. Name
-them *development-userxx* and *testing-userxx*.
+them *development-userXX* and *testing-userXX*.
 ----
-$ oc new-project development-userxx
+$ oc new-project development-userXX
 
-$ oc new-project testing-userxx
+$ oc new-project testing-userXX
 
 ----
 
@@ -30,17 +30,17 @@ The following command will allow the QA project to be able to pull the
 docker images from the Development project.
 
 ....
-$ oc policy add-role-to-group system:image-puller system:serviceaccounts:testing-userxx -n development-userxx
+$ oc policy add-role-to-group system:image-puller system:serviceaccounts:testing-userXX -n development-userXX
 ....
 
 *Step 3: Create an application in the development project*
 
-Switch over to the *development-userxx* project and deploy an
+Switch over to the *development-userXX* project and deploy an
 application using `eap64-basic-s2i` template. You can use web console or
 command line. The command line option is shown below.
 
 ----
-$ oc project development-userxx  
+$ oc project development-userXX  
 
 ----
 
@@ -48,7 +48,7 @@ $ oc project development-userxx
 deploy it so that you can redeploy with changes later.
 
 ....
-oc project development-userxx
+oc project development-userXX
 oc new-app openshift/php~https://github.com/RedHatWorkshops/welcome-php
 ....
 
@@ -97,7 +97,7 @@ to QA. Let us tag this docker image using the `oc tag` command.
 The format is:
 
 ----
-$ oc tag <IMAGE ID> development-userxx/myapp:promote-qa
+$ oc tag <IMAGE ID> development-userXX/myapp:promote-qa
 ----
 
 Check the following commands and replace the values as your needs:
@@ -141,12 +141,12 @@ Now you can switch over to the QA project and deploy the docker image
 that we tagged in development. Also expose service to create route for
 this project.
 
-IMPORTANT: Please replace *userxx* with the username assigned to you in
+IMPORTANT: Please replace *userXX* with the username assigned to you in
 the commands below.
 
 ----
-oc project testing-userxx
-oc new-app development-userxx/welcome-php:promote-qa
+oc project testing-userXX
+oc new-app development-userXX/welcome-php:promote-qa
 oc expose service welcome-php
 ----
 
