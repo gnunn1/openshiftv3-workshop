@@ -1,0 +1,94 @@
+[[deploy-a-springboot-application]]
+### Deploy an Akka Application
+
+
+In this exercise we will deploy a SpringBoot application using a custom
+source to image builder image.
+
+IMPORTANT: Please replace *userxx* with the username assigned to you in
+the commands below.
+
+*Step 1: Create a project*
+
+Using the knowledge you gained from the earlier labs create a
+new project with name `akka-userxx`.
+
+*Step 2: Create the application*
+
+Create a new application using a custom Akka SBT S2I Builder image.
+Here we will deploy sample code from a git repository
+https://github.com/gnunn1/akka-http-microservice. Please take time
+to understand the code; it is pretty simple.
+
+You may want to clone this into your git repository and deploy that, if
+you want to make changes and test.
+
+NOTE: We are using an S2I builder image from docker directly. This S2I
+builder image was created using this Dockerfile.
+https://github.com/gnunn1/sbt-s2i/blob/master/Dockerfile
+
+----
+$ oc new-app gnunn/sbt-s2i~https://github.com/gnunn1/akka-http-microservice --name=akka
+--> Found Docker image 4fd4a8a (6 minutes old) from Docker Hub for "gnunn/sbt-s2i"
+
+    sbt-s2i 0.1
+    -----------
+    S2I Builder with cached SBT 1.2.6 and Scala 2.12.7
+
+    Tags: builder, sbt, scala
+
+    * An image stream tag will be created as "sbt-s2i:latest" that will track the source image
+    * A source build using source code from https://github.com/gnunn1/akka-http-microservice will be created
+      * The resulting image will be pushed to image stream tag "akka:latest"
+      * Every time "sbt-s2i:latest" changes a new build will be triggered
+    * This image will be deployed in deployment config "akka"
+    * Port 9000/tcp will be load balanced by service "akka"
+      * Other containers can access this service through the hostname "akka"
+
+--> Creating resources ...
+    imagestream.image.openshift.io "sbt-s2i" created
+    imagestream.image.openshift.io "akka" created
+    buildconfig.build.openshift.io "akka" created
+    deploymentconfig.apps.openshift.io "akka" created
+    service "akka" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/akka' to track its progress.
+    Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+     'oc expose svc/akka'
+    Run 'oc status' to view your app.
+----
+
+Expose Service to create a route:
+
+----
+$ oc expose svc/akka
+route.route.openshift.io/akka exposed
+----
+
+Check the route:
+
+----
+$ oc get route
+NAME      HOST/PORT                                     PATH    SERVICES   PORT       TERMINATION   WILDCARD
+akkaapp   akka-akka-userXX.{{APPS_ADDRESS}}             akka    9000-tcp                 None
+----
+
+Wait for your application to be built and deployed. Using the knowlege
+you gained from the previous labs, check your build logs by running
+`oc logs -f <build pod name>`
+
+*Step 3: Test the application*
+
+Test your application by accessing the following URL, replacing the XX with your user number:
+
+----
+$ curl http://akka-akka-userXX.{{APPS_ADDRESS}}/ip/8.8.8.8
+{"city":"Mountain View","query":"8.8.8.8","country":"United States","lon":-122.085,"lat":37.4229}
+----
+
+Congratulations!! You are now running a Akka application on OpenShift.
+
+If you are interested in learning about how to build Akka applications on OpenShift using
+Jenkins please see the following blog:
+
+http://gexperts.com/wp/building-scala-and-sbt-applications-on-openshift
