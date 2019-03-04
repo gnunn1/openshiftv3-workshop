@@ -24,7 +24,7 @@ project that displays a green rectangle.
 * We will then switch the FQDN to from the first application (blue) to
 the second application (green).
 
-image::images/blue_green_deployment.png[image]
+image::blue_green_deployment.png[image]
 
 [[part-i]]
 #### Part I
@@ -163,7 +163,7 @@ $ oc get route
 Copy the HOST/PORT and paste it in your browser. You should see
 something similar to:
 
-image::images/blue_deployment.jpeg[image]
+image::blue_deployment.jpeg[image]
 
 At this point you have deployed an application that displays for
 illustration purposes a blue rectangle for version 1.
@@ -178,14 +178,14 @@ very small change)
 * Point the previously created FQDN (route) to the new service that will
 be created as part of the new application creation process.
 
-image::images/blue_green_active_green.png[image]
+image::blue_green_active_green.png[image]
 
 *Step 1: Create new version of the application*
 
 Create a new application the same way as you did above in Part I. Make
-sure to name the application as `green` this time. Notice we built it a slightly different way.  
+sure to name the application as `green` this time. Notice we built it a slightly different way.
 
-Using --image-stream and --code. This way and the previous are equivalent. 
+Using --image-stream and --code. This way and the previous are equivalent.
 
 ----
 oc new-app --image-stream=php --code={{GIT_SERVER_URL}}/RedHatWorkshops/bluegreen.git/RedHatWorkshops/bluegreen.git --env COLOR=green --name=green
