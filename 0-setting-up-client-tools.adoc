@@ -1,5 +1,6 @@
 [[setting-up-client-tools]]
-### Setting up client tools
+Setting up client tools
+~~~~~~~~~~~~~~~~~~~~~~~
 
 In this Lab we will look at how to install the OpenShift CLI tools.
 
@@ -7,10 +8,15 @@ In this Lab we will look at how to install the OpenShift CLI tools.
 
 After completing this section, you should be able to:
 
-* Locate the binaries for the OpenShift Enterprise command-line
-interface (OC CLI)
-* Install the OpenShift CLI tools.
+* Locate the binaries for the OpenShift Container Platform command-line
+interface (OCP CLI)
+* Install the OCP CLI tools.
 * CLI basic configuration
+
+NOTE: If you cannot install the tools on your laptop or would just prefer
+to start the labs right away, you can access an online terminal at {{WEB_TERMINAL_URL}} using
+the same credentials provided to you for OpenShift by the instructor. Note you will still need to
+perform the final step (CLI basic configuration) at the end which is logging into OpenShift using the oc tool.
 
 *Locating the binaries*
 
@@ -21,10 +27,14 @@ Red Hat Customer Portal via the following link:
 
 {{REDHAT_DOWNLOAD_OC_PORTAL_URL}}
 
-*Installing the OpenShift CLI tools*
+NOTE: The link above requires a Red Hat login id, if you do not
+have one you can download the Open Source binary from the OpenShift
+Origin site at {{ORIGIN_DOWNLOAD_OC_URL}}.
+
+*Installing the CLI tools*
 
 The CLI is provided as compressed files that can be decompressed to any
-directory. In order to make it simple for any user to access the OSE
+directory. In order to make it simple for any user to access the OCP
 CLI, it is recommended that it is made available in a directory mapped
 to the environment variable called `PATH` from the OS. More information
 can be found about installation process here:
@@ -36,22 +46,22 @@ can be found about installation process here:
 paths listed in the `PATH` environment variable.
 2.  *Windows:*
 +
-2.1. Use `oc.exe` to open an OpenShift shell. If you getting error from
-running oc, go to http://git-scm.com to download git bash for Windows (during
+2.1. Use oc.exe to open an OpenShift shell. If you getting error from
+running oc, go to git-scm.com to download git bash for Windows (during
 installation you need to specify in the selection to integrate with the
 command prompt)
 +
-2.2. Download and install Notepad++ and install the JSON plugin or use
+2.2. (Optional) Download and install Notepad++ and install the JSON plugin or use
 http://jsonlint.com/ to edit and validate JSON.
 +
 http://ammonsonline.com/formatted-json-in-notepad/
 +
-2.3. Configure your default editor to be Notepad++
+2.3. (Optional) Configure your default editor to be Notepad++
 
 *CLI basic configuration*
 
 The easiest way to initially setup the OpenShift CLI is to use the
-`oc login` command. It'll interactively ask you a server URL, username
+`oc login` command. It’ll interactively ask you a server URL, username
 and password. The information is automatically saved in a CLI
 configuration file that is then used for subsequent commands.
 
@@ -62,3 +72,20 @@ $ oc login {{CONSOLE_ADDRESS}}
 ----
 
 NOTE: Username and password will be provided by your instructor.
+
+**Installing the git client**
+
+One of the labs requires that git be available in order to complete the lab. To install git follow the instructions below:
+
+1. **Linux:**
+
+	1.1. Git is normally already installed. If not, on RHEL/CentOS/Fedora `yum install git`
+
+2. **OSX:**
+
+	2.1. For OSX, you have two choices. If you are using `brew`, you can simply run `brew install git`.
+	2.2. If you do not have `brew`, you can use the `git-osx-installer` available here : https://sourceforge.net/projects/git-osx-installer/files/
+
+3. **Windows:**
+
+    3.1. For Windows, use the package available here : https://git-for-windows.github.io/
