@@ -1,8 +1,8 @@
-[[deploy-a-springboot-application]]
+[[deploy-an-akka-application]]
 ### Deploy an Akka Application
 
 
-In this exercise we will deploy a SpringBoot application using a custom
+In this exercise we will deploy an Akka application using a custom
 source to image builder image.
 
 IMPORTANT: Please replace *userxx* with the username assigned to you in
