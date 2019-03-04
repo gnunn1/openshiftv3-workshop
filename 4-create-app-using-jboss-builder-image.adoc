@@ -32,11 +32,11 @@ Open the browser and select your new project *My JBoss Applications*.
 
 Click into *Add to Project* button.
 
-Select `Browse` ->  `Languages` -> `Java` -> `JBoss EAP 6.4 (no https)`  
+Select `Browse` ->  `Languages` -> `Java` -> `JBoss EAP 6.4 (no https)`
 
-Fill the fields with the following information:  
+Fill the fields with the following information:
 
-image::images/kitchensink_details.png[image]
+image::kitchensink_details.png[image]
 
 
 [width="50%",options="header"]
@@ -45,16 +45,16 @@ image::images/kitchensink_details.png[image]
 |ks   |https://github.com/RedHatWorkshops/kitchensink
 |=========================================================
 
-NOTE: If you're instructor has set up a Nexus Repo please add the MAVEN_MIRROR_URL environment variable.  It will be on the same window farther down.  
+NOTE: If you're instructor has set up a Nexus Repo please add the MAVEN_MIRROR_URL environment variable.  It will be on the same window farther down.
 
 
 [width="50%",options="header"]
 |=========================================================
 |Name |Value
-|MAVEN_MIRROR_URL   | 
+|MAVEN_MIRROR_URL   |{{NEXUS_URL}}
 |=========================================================
 
-image::images/nexus_repo.png[image]
+image::nexus_repo.png[image]
 
 Click on *Create* and then on *Continue to overview*.
 
@@ -74,7 +74,7 @@ Note the name of the build that is running i.e. `ks-1`. We will use that
 name to look at the build logs. Run the command as shown below to look
 at the build logs. This will run for a few mins. At the end you will
 notice that the docker image is successfully created and it will start
-pushing this to OpenShift internal docker registry.
+pushing this to OpenShift's internal docker registry.
 
 ----
 $ oc get pods
@@ -133,8 +133,8 @@ Push successful
 You will notice that in the logs that not only does it copy your source
 code to the builder image, but it also does a `maven` build to compile
 your code as well. Also, in the above log, note how the image is pushed
-to the local docker registry. The registry is running at `172.30.89.28`
-at port `5000` in this case.
+to the local docker registry. The registry is running at `docker-registry.default.svc`
+at port `5000`.
 
 *Step 4: Deployment*
 
