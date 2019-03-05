@@ -5,7 +5,7 @@ config:
       value: openshift
     - name: GIT_SERVER_URL
       desc: Git server url
-      value: http://gogs-ci.apps.sanantonio-bfa3.openshiftworkshop.com
+      value: https://github.com/RedHatWorkshops/openshiftv3-workshop
     - name: CONSOLE_ADDRESS
       desc: HTTP address of the OpenShift console
       value: https://master.rogers-08fa.openshiftworkshop.com
